@@ -1,0 +1,45 @@
+<h1>Senarai tugasan anda</h1>
+
+<style>
+body
+{
+
+}
+
+<h1>
+{
+  
+}
+</h1>
+</style>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Tajuk</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.state %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
+<a href= "\user">Link ke user</a>
+<br><%= link_to "Link ke Foodstall" , new_foodstall_path %></br>
