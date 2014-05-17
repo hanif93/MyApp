@@ -1,20 +1,20 @@
-<h1>Senarai tugasan anda</h1>
+<div align="center"><h1>Senarai Tugasan Anda</h1></div>
 
 <style>
-body
+table,th,td
 {
-
+  border:5px solid black;
+  border-collapse:collapse;
 }
 
-<h1>
+th,td
 {
-  
+  padding:10px;
 }
-</h1>
 </style>
 
-
-<table>
+<div align="center">
+<table style = "width:500px">
   <thead>
     <tr>
       <th>Tajuk</th>
@@ -37,9 +37,12 @@ body
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
+<div align="center">
 <%= link_to 'New Task', new_task_path %>
 <a href= "\user">Link ke user</a>
 <br><%= link_to "Link ke Foodstall" , new_foodstall_path %></br>
+</div>
